@@ -1,14 +1,15 @@
 CREATE TABLE t_member_hobbit (
 	memberID CHAR(8) NOT NULL ,
 	hobbit_id INT(10) UNSIGNED NOT NULL ,
-	PRIMARY KEY (memberID, hobbit_id),
+	PRIMARY KEY (memberID, hobbit_id), -- PK 여러개 줄때는 항상 이 방법
 	FOREIGN KEY (memberID) REFERENCES membertbl (memberID),
 	FOREIGN KEY (hobbit_id) REFERENCES t_hobbit_2 (hobbit_id)
 );
+-- FK 걸려있으면 참조한 데이터 안지워진다
 
 SELECT * FROM t_member_hobbit;
 
--- 테이블 외래키 확인 (fk 연결됐는지 확인)
+-- 툴 이용) 테이블 탭 외래키 확인 (fk 연결됐는지 확인)
 
 INSERT INTO t_member_hobbit
 ( memberid, hobbit_id )
