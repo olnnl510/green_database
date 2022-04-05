@@ -11,6 +11,7 @@ SELECT * FROM t_member_hobbit;
 
 -- 툴 이용) 테이블 탭 외래키 확인 (fk 연결됐는지 확인)
 
+-- fk 걸려있는 값만 들어감
 INSERT INTO t_member_hobbit
 ( memberid, hobbit_id )
 VALUES
